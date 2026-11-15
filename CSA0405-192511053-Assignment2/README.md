@@ -18,8 +18,7 @@ All C files use `gcc -std=c11 -Wall -Wextra`; thread and semaphore programs addi
 - Task05: `bounded_buffer.c`, `lock_test.c`, `sync_benchmark.c`, `peterson.c`, `monitor_buffer.c`
 - Task06: `banker.c`, `banker_bench.c` (7 trials, median)
 
-## Reproducibility and GitHub requirement
-The question paper requires a public repository or faculty collaborator access and at least one progressive commit per task. Create the repository under the exact required name, push these folders, and commit each Task folder separately. A repository URL and commit history cannot be created or verified from this offline package; add the real URL to the report cover page before submission.
+
 
 ## Important measurement note
 Timings depend on CPU, kernel, compiler, power mode and background load. The report labels the actual environment and explains the measurement method. Do not present these timings as universal constants.

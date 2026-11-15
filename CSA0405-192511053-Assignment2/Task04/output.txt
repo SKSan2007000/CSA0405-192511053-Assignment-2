@@ -1,0 +1,7 @@
+analyser: 6 readings, average 35.5, max 41
+reader: done
+shared memory: 6 readings, average 35.5, max 41
+IPC transfer benchmark (5 trials per size; median shown)
+1 MB pipe median=0.601 ms (1663.1 MB/s); shared-memory median=0.447 ms (2238.4 MB/s)
+10 MB pipe median=6.173 ms (1619.9 MB/s); shared-memory median=3.528 ms (2834.8 MB/s)
+100 MB pipe median=28.052 ms (3564.8 MB/s); shared-memory median=37.676 ms (2654.2 MB/s)

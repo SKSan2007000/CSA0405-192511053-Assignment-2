@@ -1,0 +1,1 @@
+producers=1 consumers=1 items=1000 sum=500500 expected=500500 each_once=yes

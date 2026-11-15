@@ -1,0 +1,11 @@
+Parent PID: 11422
+Child 1 PID=11424 PPID=11422
+Child 2 PID=11425 PPID=11422
+Child 3 PID=11426 PPID=11422
+Child 4 PID=11427 PPID=11422
+Use ps -o pid,ppid,stat,comm --ppid 11422
+Reaped PID=11424 status=0
+Reaped PID=11425 status=0
+Reaped PID=11426 status=0
+Reaped PID=11427 status=0
+All children collected.

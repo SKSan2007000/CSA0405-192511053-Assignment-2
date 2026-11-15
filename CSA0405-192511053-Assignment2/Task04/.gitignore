@@ -1,0 +1,17 @@
+*.o
+*.out
+*.exe
+process_demo
+process_scale
+scheduling
+thread_pool
+pipe_weather
+shm_weather
+ipc_benchmark
+bounded_buffer
+lock_test
+sync_benchmark
+peterson
+monitor_buffer
+banker
+banker_bench

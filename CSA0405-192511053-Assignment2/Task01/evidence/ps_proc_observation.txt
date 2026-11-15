@@ -1,0 +1,26 @@
+--- ps process tree ---
+    PID    PPID STAT COMMAND
+  11422   11416 S    process_demo
+  11424   11422 S     \_ process_demo
+  11425   11422 S     \_ process_demo
+  11426   11422 S     \_ process_demo
+  11427   11422 S     \_ process_demo
+--- /proc/11424/status (selected fields) ---
+Name:	process_demo
+State:	S (sleeping)
+Pid:	11424
+PPid:	11422
+VmSize:	    2564 kB
+VmRSS:	     292 kB
+Threads:	1
+Parent PID: 11422
+Child 1 PID=11424 PPID=11422
+Child 2 PID=11425 PPID=11422
+Child 3 PID=11426 PPID=11422
+Child 4 PID=11427 PPID=11422
+Use ps -o pid,ppid,stat,comm --ppid 11422
+Reaped PID=11424 status=0
+Reaped PID=11425 status=0
+Reaped PID=11426 status=0
+Reaped PID=11427 status=0
+All children collected.

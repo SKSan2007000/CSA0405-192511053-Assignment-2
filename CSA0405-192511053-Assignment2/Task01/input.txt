@@ -1,0 +1,1 @@
+Four child processes; inspect ps and /proc while children sleep. Scale test: create and reap 2,000 children.

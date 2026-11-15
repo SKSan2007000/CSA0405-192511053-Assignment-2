@@ -1,0 +1,8 @@
+initial state safe: P1 P3 P4 P0 P2
+P1 request: granted, safe sequence P1 P3 P4 P0 P2
+P4 request: must wait (not available)
+P0 request: denied (unsafe)
+Banker safety scan: 7 trials per size; median shown
+processes=10 resources=3 median=0.000000591 s min=0.000000571 max=0.000001182
+processes=100 resources=3 median=0.000045018 s min=0.000044618 max=0.000046510
+processes=1000 resources=3 median=0.004569152 s min=0.004485817 max=0.004819150

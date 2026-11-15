@@ -1,0 +1,3 @@
+global lock time=0.021270 s bookings=800000 expected=800000 throughput=37611150 bookings/s
+per-train lock time=0.005904 s bookings=800000 expected=800000 throughput=135503489 bookings/s
+per-coach lock time=0.003848 s bookings=800000 expected=800000 throughput=207906962 bookings/s

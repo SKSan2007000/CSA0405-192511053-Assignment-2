@@ -1,0 +1,5 @@
+#include <stdio.h>
+#define N 4
+int at[N]={0,1,2,3},bt[N]={8,4,9,5};char *nm[N]={"P1","P2","P3","P4"};
+void rr(int q){int rem[N],ct[N]={0},rt[N],queue[100],h=0,t=0,added[N]={0},done=0,now=0,slices=0;for(int i=0;i<N;i++){rem[i]=bt[i];rt[i]=-1;}queue[t++]=0;added[0]=1;printf("RR quantum %d Gantt:",q);while(done<N){if(h==t){int p=-1;for(int i=0;i<N;i++)if(!added[i]&&(p<0||at[i]<at[p]))p=i;if(p<0)break;now=at[p];queue[t++]=p;added[p]=1;}int p=queue[h++],run=rem[p]<q?rem[p]:q;if(rt[p]<0)rt[p]=now-at[p];slices++;printf(" %s(%d-%d)",nm[p],now,now+run);now+=run;rem[p]-=run;for(int i=0;i<N;i++)if(!added[i]&&at[i]<=now){queue[t++]=i;added[i]=1;}if(rem[p])queue[t++]=p;else{ct[p]=now;done++;}}double sw=0,st=0,sr=0;puts("\nProcess CT TAT WT RT");for(int i=0;i<N;i++){int tat=ct[i]-at[i],wt=tat-bt[i];printf("%s %d %d %d %d\n",nm[i],ct[i],tat,wt,rt[i]);sw+=wt;st+=tat;sr+=rt[i];}printf("Average TAT %.2f WT %.2f RT %.2f\n",st/N,sw/N,sr/N);printf("CPU slices=%d context-switches=%d\n",slices,slices>0?slices-1:0);}
+int main(void){rr(1);rr(3);rr(5);rr(20);return 0;}

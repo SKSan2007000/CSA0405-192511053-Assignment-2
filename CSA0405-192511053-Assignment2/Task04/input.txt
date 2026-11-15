@@ -1,0 +1,2 @@
+Sensor readings: 31 33 36 34 41 38
+Transfer payload sizes: 1 MB, 10 MB and 100 MB. Five trials per method; median reported.

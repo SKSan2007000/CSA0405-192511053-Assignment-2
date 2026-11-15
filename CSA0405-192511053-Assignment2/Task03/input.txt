@@ -1,0 +1,1 @@
+64 camera workloads. Worker pool sizes: 1, 4, 8, 16 and 64. Compare elapsed time and speed-up.

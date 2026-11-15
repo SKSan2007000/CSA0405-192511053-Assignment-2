@@ -1,0 +1,17 @@
+producers=1 consumers=1 items=1000 sum=500500 expected=500500 each_once=yes
+producers=4 consumers=4 items=4000 sum=8002000 expected=8002000 each_once=yes
+100 runs: all returned success (4 producers, 4 consumers; 4,000 unique items per run)
+global lock time=0.021270 s bookings=800000 expected=800000 throughput=37611150 bookings/s
+per-train lock time=0.005904 s bookings=800000 expected=800000 throughput=135503489 bookings/s
+per-coach lock time=0.003848 s bookings=800000 expected=800000 throughput=207906962 bookings/s
+mutex              threads= 1 updates=200000 time=0.001498 s cpu=0.001378 s result=correct
+mutex              threads= 4 updates=800000 time=0.018027 s cpu=0.044526 s result=correct
+mutex              threads=16 updates=3200000 time=0.064564 s cpu=0.242229 s result=correct
+atomic_fetch_add   threads= 1 updates=200000 time=0.000485 s cpu=0.000349 s result=correct
+atomic_fetch_add   threads= 4 updates=800000 time=0.007086 s cpu=0.026071 s result=correct
+atomic_fetch_add   threads=16 updates=3200000 time=0.029023 s cpu=0.135226 s result=correct
+spin_lock          threads= 1 updates=200000 time=0.000513 s cpu=0.000448 s result=correct
+spin_lock          threads= 4 updates=800000 time=0.037912 s cpu=0.136311 s result=correct
+spin_lock          threads=16 updates=3200000 time=0.501554 s cpu=2.044365 s result=correct
+Peterson with C11 sequentially-consistent atomics: counter=200000 expected=200000
+monitor-style condition variable sum=210 expected=210

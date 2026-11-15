@@ -1,0 +1,1 @@
+Bounded buffer: 1 producer/1 consumer and 4 producers/4 consumers. 1,000 unique items per producer. Repeat the 4x4 test 100 times. Compare global, per-train and per-coach locks.

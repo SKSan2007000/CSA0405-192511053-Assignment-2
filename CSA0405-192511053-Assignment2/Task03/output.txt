@@ -1,0 +1,5 @@
+pool=1 elapsed=0.098129 speedup=1.000
+pool=4 elapsed=0.026194 speedup=3.746
+pool=8 elapsed=0.032869 speedup=2.985
+pool=16 elapsed=0.024365 speedup=4.027
+pool=64 elapsed=0.034358 speedup=2.856
